@@ -44,10 +44,9 @@ const randomGradeGenerator = value => {
     let finalGradesObj = {}
     for (let i = 1; i <= response.noOfPapers; i++) {
       finalGradesObj[i]= randomGradeGenerator(i) 
-    }
+        }
     return finalGradesObj
-
-    
+  
   }
   console.log(finalGradesGenerator())
   console.log(response.noOfPapers) // => { value: 24 }
