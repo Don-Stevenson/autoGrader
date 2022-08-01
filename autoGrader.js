@@ -13,13 +13,13 @@ const randomGradeGenerator = value => {
   for (let i = value; i > 0; i--) {
     r += Math.random()
   }
-  return `${((r / value)*100).toFixed(1)}%`
+  return `${((r / value) * 100).toFixed(1)}%`
 }
 
 ;(async () => {
   const response = await prompts({
     type: "number",
-    name: "value",
+    name: "noOfPapers",
     initial: `number of papers to be marked`,
     message: `
     * Welcome to AutoGrader! *
@@ -32,8 +32,23 @@ const randomGradeGenerator = value => {
     and I still need my laptop"
   
     First, how many papers do you need to mark?`,
-    validate: value => validateNum(value),
+    validate: noOfPapers => validateNum(noOfPapers),
+
+    // for (let i = 0; index < noOfPapers; index++) {
+    //   const element = array[index];
+
+    // }
   })
 
-  console.log(response.value) // => { value: 24 }
+  const finalGradesGenerator = () => {
+    let finalGradesObj = {}
+    for (let i = 1; i <= response.noOfPapers; i++) {
+      finalGradesObj[i]= randomGradeGenerator(i) 
+    }
+    return finalGradesObj
+
+    
+  }
+  console.log(finalGradesGenerator())
+  console.log(response.noOfPapers) // => { value: 24 }
 })()
