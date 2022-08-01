@@ -22,4 +22,4 @@
 
 #
 ### Run:
-git clone and run using: `node autoGrader.js`
+Use `git clone` to clone the repo and run using `node autoGrader.js`
