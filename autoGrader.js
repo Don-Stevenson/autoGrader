@@ -62,11 +62,10 @@ const randn_bm = () => {
 
   console.log(
     `  
-
     * Thank you for choosing wisely and using AutoGrader! *
     *******************************************************
    
-    The list below represents the number and the grade assigned for that paper
+    The list below represents the number and the grade assigned for each paper
   
     e.g. 1st paper is notated as 1' and
     the grade is then given as the corresponding value
