@@ -16,17 +16,15 @@ const randn_bm = () => {
   let num = Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v)
   num = num / 10.0 + 0.5 // Translate to 0 -> 1
   if (num > 1 || num < 0) return randn_bm() // resample between 0 and 1
-  if (!num) return randn_bm() 
+  if (!num) return randn_bm()
   // Skew to avoid complaints of low grades
   if (num < 0.2) return `${(num * 100 + 20).toFixed(1)}%`
   if (num > 0.2 && num <= 0.45) return `${(num * 100 + 20).toFixed(1)}%`
-  if (num > 0.45 && num <= 0.64)
-    return `${(num * 100 + 15).toFixed(1)}%`
-  if (num > 0.65 && num <= 0.75)
-    return `${(num * 100 + 10).toFixed(1)}%`
+  if (num > 0.45 && num <= 0.64) return `${(num * 100 + 15).toFixed(1)}%`
+  if (num > 0.65 && num <= 0.75) return `${(num * 100 + 10).toFixed(1)}%`
   if (num > 0.75 && num <= 0.85) return `${(num * 100 + 5).toFixed(1)}%`
   if (num > 0.85 && num <= 0.98) return `${(num * 100 + 2).toFixed(1)}%`
- }
+}
 
 ;(async () => {
   const response = await prompts({
@@ -56,15 +54,13 @@ const randn_bm = () => {
   })
 
   const results = (function () {
-        let finalGradesObj = {}
+    let finalGradesObj = {}
     for (let i = 1; i <= response.noOfPapers; i++) {
       finalGradesObj[i] = randn_bm()
     }
     return finalGradesObj
-  }())
-  
-  console.log(results);
- 
+  })()
+
   console.log(
     `  
 
@@ -80,8 +76,8 @@ const randn_bm = () => {
     in that case, Autograder *strongly* encourages giving this student
     a grade of 69% 
     Nice. ;)
- 
-       
-    `, results
+        
+    `,
+    results
   )
 })()
