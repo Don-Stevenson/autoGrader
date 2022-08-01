@@ -18,11 +18,10 @@ const randn_bm = () => {
   if (num > 1 || num < 0) return randn_bm() // resample between 0 and 1
   if (!num) return randn_bm()
   // Skew to avoid complaints of low grades
-  if (num < 0.2) return `${(num * 100 + 20).toFixed(1)}%`
-  if (num > 0.2 && num <= 0.45) return `${(num * 100 + 20).toFixed(1)}%`
-  if (num > 0.45 && num <= 0.64) return `${(num * 100 + 15).toFixed(1)}%`
-  if (num > 0.65 && num <= 0.75) return `${(num * 100 + 10).toFixed(1)}%`
-  if (num > 0.75 && num <= 0.85) return `${(num * 100 + 5).toFixed(1)}%`
+  if (num < 0.2) return `${(num * 100 + 25).toFixed(1)}%`
+  if (num > 0.2 && num <= 0.64) return `${(num * 100 + 20).toFixed(1)}%`
+  if (num > 0.65 && num <= 0.75) return `${(num * 100 + 18).toFixed(1)}%`
+  if (num > 0.75 && num <= 0.85) return `${(num * 100 + 14).toFixed(1)}%`
   if (num > 0.85 && num <= 0.98) return `${(num * 100 + 2).toFixed(1)}%`
 }
 
