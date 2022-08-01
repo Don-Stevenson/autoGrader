@@ -8,12 +8,12 @@ const validateNum = value => {
   } else return true
 }
 
-const randomG = v => {
-  const r = 0
-  for (const i = v; i > 0; i--) {
+const randomGradeGenerator = value => {
+  let r = 0
+  for (let i = value; i > 0; i--) {
     r += Math.random()
   }
-  return r / v
+  return `${((r / value)*100).toFixed(1)}%`
 }
 
 ;(async () => {
