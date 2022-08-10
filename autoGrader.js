@@ -90,7 +90,7 @@ So, how many papers do you need to mark?`,
   const results = () => {
     let finalGradesObj = {};
     for (let i = 1; i <= response.noOfPapers; i++) {
-      finalGradesObj[i] = randn_bm(
+      finalGradesObj[`student: ${i}`] = randn_bm(
         response.lowestGrade,
         response.highestGrade,
         response.skew
@@ -112,8 +112,6 @@ So, how many papers do you need to mark?`,
     in that case, Autograder *strongly* encourages giving this student
     a grade of 69% 
     Nice. ;)
-    
-    ${results()}
     `;
-  console.log(output);
+  console.log(results());
 })();
