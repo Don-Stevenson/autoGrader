@@ -2,13 +2,13 @@ const prompts = require("prompts");
 
 // helpers
 // **********
-const validateNum = value => {
+const validateNum = (value) => {
   if (value > 200 || value < 0 || isNaN(parseFloat(value))) {
     return "Error!! Please enter a whole number between 0 and 150";
   } else return true;
 };
 
-const validateSkew = value => {
+const validateSkew = (value) => {
   if (value > 4 || value < 0 || isNaN(value)) {
     return "Error!! Please enter a number between 0 and 4";
   } else return true;
@@ -57,21 +57,21 @@ to help avoid crying students during office hours.
 
 So, how many papers do you need to mark?`,
 
-    validate: noOfPapers => validateNum(noOfPapers)
+    validate: (noOfPapers) => validateNum(noOfPapers),
   },
   {
     type: "number",
     name: "lowestGrade",
     initial: `enter a number between 1 and 100`,
     message: `What's the lowest grade you want to give?`,
-    validate: lowestGrade => validateNum(lowestGrade)
+    validate: (lowestGrade) => validateNum(lowestGrade),
   },
   {
     type: "number",
     name: "highestGrade",
     initial: `enter a number between 1 and 100`,
     message: `What's the Highest grade you want to give?`,
-    validate: highestGrade => validateNum(highestGrade)
+    validate: (highestGrade) => validateNum(highestGrade),
   },
   {
     type: "number",
@@ -80,8 +80,8 @@ So, how many papers do you need to mark?`,
     message: `How would you like to skew the grades? 
     a smaller skew, say, 0.25 will give more higher grades, 
     while a higher skew will give more lower grades`,
-    validate: highestGrade => validateSkew(highestGrade)
-  }
+    validate: (highestGrade) => validateSkew(highestGrade),
+  },
 ];
 
 (async () => {
