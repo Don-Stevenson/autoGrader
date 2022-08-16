@@ -106,11 +106,6 @@ So, how many papers do you need to mark?`,
     e.g. 1st paper is notated as 1' and
     the grade is then given as the corresponding value
   
-    Note: On occasion, a grade is listed as 'undefined',
-    in that case, Autograder *strongly* encourages giving this student
-    a grade of 69% 
-    Nice. ;)
-
     ${results()
       .map((grade, index) => `student no ${index + 1} : ${grade}`)
       .join("\n    ")}

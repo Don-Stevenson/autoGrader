@@ -17,9 +17,6 @@
     It progressively skews lower grades higher
     to help avoid crying students during office hours. 
 
-* please note, in Autograder v1.0, on occasion, a grade is listed as 'undefined', in that case, the folks here at Autograder *strongly* encourage giving this student a grade of 69%. :) Nice.
- 
-
 #
 ## You’re on sessional easy street now with AutoGrader!
 
@@ -31,4 +28,5 @@
 
 #
 ### Run:
-Use `git clone` to clone the repo and run using `node autoGrader.js`
+Use `git clone` and `npm i` to clone and then install the repo. 
+Run using `node autoGrader.js`
