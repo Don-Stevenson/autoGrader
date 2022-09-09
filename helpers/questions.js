@@ -4,13 +4,7 @@ const paperMin = 0;
 const paperMax = 200;
 const gradeMin = 0;
 const gradeMax = 100;
-
-const validateIsNumBetween = (value, min, max) => {
-  if (value > max || value < min || isNaN(value)) {
-    return `Error!! Please enter a number between ${min} and ${max}`;
-  }
-  return true;
-};
+const { validateIsNumBetween } = require("./validateIsNumBetween")
 
 const questions = [
   {
