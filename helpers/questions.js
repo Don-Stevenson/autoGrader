@@ -1,9 +1,9 @@
-const skewMin = 0;
-const skewMax = 4;
-const paperMin = 0;
-const paperMax = 200;
-const gradeMin = 0;
-const gradeMax = 100;
+const skewMin = 0
+const skewMax = 4
+const paperMin = 0
+const paperMax = 200
+const gradeMin = 0
+const gradeMax = 100
 const { validateIsNumBetween } = require("./validateIsNumBetween")
 
 const questions = [
@@ -38,14 +38,16 @@ const questions = [
     name: "lowestGrade",
     initial: `enter a number between 1 and 100`,
     message: `What's the lowest grade you want to give?`,
-    validate: lowestGrade => validateIsNumBetween(lowestGrade, gradeMin, gradeMax)
+    validate: lowestGrade =>
+      validateIsNumBetween(lowestGrade, gradeMin, gradeMax)
   },
   {
     type: "number",
     name: "highestGrade",
     initial: `enter a number between 1 and 100`,
     message: `What's the Highest grade you want to give?`,
-    validate: highestGrade => validateIsNumBetween(highestGrade, gradeMin, gradeMax)
+    validate: highestGrade =>
+      validateIsNumBetween(highestGrade, gradeMin, gradeMax)
   },
   {
     type: "number",
@@ -57,6 +59,6 @@ const questions = [
       while a higher skew of say 3, will produce more lower grades`,
     validate: skew => validateIsNumBetween(skew, skewMin, skewMax)
   }
-];
+]
 
-exports.questions = questions;
+exports.questions = questions

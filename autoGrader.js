@@ -1,6 +1,6 @@
-const prompts = require("prompts");
-const { generateGrades } = require("./helpers/generateGrades.js");
-const { questions } = require("./helpers/questions");
+const prompts = require("prompts")
+const { generateGrades } = require("./helpers/generateGrades.js")
+const { questions } = require("./helpers/questions")
 
 (async () => {
   const response = await prompts(questions);
@@ -16,5 +16,5 @@ const { questions } = require("./helpers/questions");
     generateGrades(response)
       .map((grade, index) => `student no ${index + 1} : ${grade}`)
       .join("\n  ")
-  );
-})();
+  )
+})()
