@@ -2,7 +2,7 @@ const prompts = require("prompts")
 const { generateGrades } = require("./helpers/generateGrades.js")
 const { questions } = require("./helpers/questions")
 
-(async () => {
+;(async () => {
   const response = await prompts(questions);
 
   const header = `  
