@@ -1,8 +1,6 @@
-const validateIsNumBetween = (value, min, max) => {
-  if (value > max || value < min || isNaN(value)) {
-    return `Error!! Please enter a number between ${min} and ${max}`
-  }
-  return true
-}
+const validateIsNumBetween = (value, min, max) =>
+  value > max || value < min || isNaN(value)
+    ? `Error!! Please enter a number between ${min} and ${max}`
+    : true
 
 exports.validateIsNumBetween = validateIsNumBetween
