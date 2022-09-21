@@ -5,15 +5,13 @@ const { questions } = require("./helpers/questions")
   ; (async () => {
     const response = await prompts(questions)
 
-
-
     const header = `  
   * Thank you for choosing wisely and using AutoGrader! *
   *******************************************************
  
   The list below represents the number and the grade assigned for each paper`
 
-    if (!response.noOfPapers || !response.skew || response.lowestGrade || response.highestGrade) console.log(`
+    if ((!response.noOfPapers || !response.skew || !response.lowestGrade || !response.highestGrade)) console.log(`
   AutoGrader has been aborted. Goodbye!
   `)
     else
