@@ -12,11 +12,22 @@ const { questions } = require("./helpers/questions")
   *******************************************************
  
   The list below represents the number and the grade assigned for each paper`
-  console.log(
-    header,
-    "\n\n ",
-    generateGrades(response)
-      .map((grade, index) => `student no ${index + 1} : ${grade}`)
-      .join("\n  ")
+
+  if (
+    !response.noOfPapers ||
+    !response.skew ||
+    !response.lowestGrade ||
+    !response.highestGrade
   )
+    console.log(`
+  AutoGrader has been aborted. Goodbye!
+  `)
+  else
+    console.log(
+      header,
+      "\n\n ",
+      generateGrades(response)
+        .map((grade, index) => `student no ${index + 1} : ${grade}`)
+        .join("\n  ")
+    )
 })()
