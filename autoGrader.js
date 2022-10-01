@@ -11,7 +11,14 @@ const { questions } = require("./helpers/questions")
  
   The list below represents the number and the grade assigned for each paper`
 
-    if ((!response.noOfPapers || !response.skew || !response.lowestGrade || !response.highestGrade)) console.log(`
+    if (
+      !response.noOfPapers ||
+      response.skew < 0 ||
+      response.lowestGrade < 0 ||
+      response.highestGrade > 100 ||
+      response.lowestGrade > response.highestGrade
+    )
+      console.log(`
   AutoGrader has been aborted. Goodbye!
   `)
     else

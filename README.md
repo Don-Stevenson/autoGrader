@@ -15,7 +15,7 @@
 #
 
 - Autograder marks on a bell curve.
-  It progressively skews lower grades higher
+  It has the capacity to grades (from >0 to <=4, where numbers closer to 0 will produce more _higher_ grades)
   to help avoid crying students during office hours.
 
 #
