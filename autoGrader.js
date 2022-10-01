@@ -1,7 +1,9 @@
+// requires & imports
 const prompts = require("prompts")
 const { generateGrades } = require("./helpers/generateGrades.js")
 const { questions } = require("./helpers/questions")
 
+  // run the program
   ; (async () => {
     const response = await prompts(questions)
 
