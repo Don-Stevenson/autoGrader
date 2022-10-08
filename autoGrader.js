@@ -22,15 +22,16 @@ const { questions } = require("./helpers/questions")
       highestGrade > 100 ||
       lowestGrade > highestGrade
     ) console.log(' AutoGrader has been aborted. Goodbye!')
-    else if (!noOfPapers || !skew || !lowestGrade || !highestGrade) console.log(`
-    'a problem has been detected with one or more of the values entered. Please double check your entries and try again.'
-  `)
+    else if (!noOfPapers || !skew || !lowestGrade || !highestGrade) console.log(
+      `a problem has been detected with one or more of the values entered. 
+       Please double check your entries and try again.`
+    )
     else
       console.log(
         header,
         "\n\n ",
         generateGrades(lowestGrade, highestGrade, noOfPapers, skew)
-          .map((grade, index) => `student no ${index + 1} : ${grade}`)
+          .map((grade, index) => `student no ${index + 1} : ${grade} `)
           .join("\n  ")
       )
   })()
