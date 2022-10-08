@@ -6,7 +6,7 @@
 
 ## About:
 
-#### AutoGrader is a simple, command line driven tool that takes away all the stress and agony of marking papers away for good.
+#### AutoGrader is a simple, command line tool that takes away all the stress and agony of marking papers away for good.
 
 #### _At last! You can relax again!_
 
